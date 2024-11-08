@@ -18,5 +18,8 @@
     <ClInclude Include="tuple.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="alloc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

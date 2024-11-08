@@ -1,19 +1,20 @@
 #pragma once
+#include<tuple>
+
 namespace ldd
 {
 	//原模版
 	template<typename... Values>
 	class Tuple;
-
 	//最后一个模板，也不用传类型
 	template<>
-	class Tuple<>;
+	class Tuple<> {};
 
 	//使用递归继承实验tuple，一个tuple里可有多种不同类型
 	template<typename Head, typename... Tail>
 	class Tuple<Head, Tail...> : Tuple<Tail...>
 	{
-		typedef Tuple<Tail...> tail_tup;
+		using tail_tup = Tuple<Tail...>;
 
 	public:
 		Tuple() {}
